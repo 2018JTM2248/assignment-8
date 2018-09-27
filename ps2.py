@@ -52,7 +52,7 @@ for i in quer_str:
         if i==k :
             decrypted=decrypted+new_k2[index2]
             index2=index2+1
-            
+
     for l in new_k3 :
         if i==l :
             decrypted=decrypted+new_k3[index3]
