@@ -2,9 +2,20 @@
 ###### this is the second .py file ###########
 
 ####### write your code here ##########
+#function definition to rotate a string d elemets to right
+def rotate_right(array,d):
+    r1=array[0:len(array)-d]  # taking first n-d letters
+    r2=array[len(array)-d:]  # last d letters
+    rotate = r2+r1   # reversed the order
+    return rotate   #return ststement
 
-key = [1,1,1]
-quer_str = input("Enter Encrypted string")
+
+
+decrypted=""                        # decrypted string will be stored here
+k1=int(input("Enter the amount by which key1 elemets to be rotated\n Decryption key1 = : "))
+k2=int(input("\nDecryption key2  = : "))
+k3=int(input("\nDecryption key3  = : "))
+quer_str = input("Enter Encrypted string\n")
 print(quer_str)
 alphabets="abcdefghijklmnopqrstuvwxyz_"
 alphabets1=alphabets[0:9]
@@ -25,4 +36,25 @@ for i in quer_str :
     for l in alphabets3:
         if i==l:
             key3 = key3 + str(i)
-print(key2)
+new_k1=rotate_right(key1,k1)
+new_k2=rotate_right(key2,k2)
+new_k3=rotate_right(key3,k3)
+index1=0
+index2=0
+index3=0
+for i in quer_str:
+    for j in new_k1 :
+        if i==j :
+            decrypted=decrypted+new_k1[index1]
+            index1 = index1+1
+
+    for k in new_k2 :
+        if i==k :
+            decrypted=decrypted+new_k2[index2]
+            index2=index2+1
+            
+    for l in new_k3 :
+        if i==l :
+            decrypted=decrypted+new_k3[index3]
+            index3=index3+1
+print(decrypted)
