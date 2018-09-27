@@ -8,9 +8,9 @@
 
 n=int(input("Enter no of rows : n :"))
 m=int(input("Enter no of cols : m :"))
-
-for i in range[0,n]:
-    
-    row[i]=list(input("Enter row i\n"))
-
-print(row)
+list1=[]
+# Input a Array of S and D from user adn store it in list1
+for index in range(n):
+    s=list(input())
+    list1+=[s]
+print(list1)
